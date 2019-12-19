@@ -19,10 +19,10 @@ public class Contacto {
 
     public static ArrayList getCollection() {
         ArrayList<Contacto> collection = new ArrayList<>();
-        collection.add(new Contacto("981999923", "Bichito","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-4.jpeg"));
-        collection.add(new Contacto("9859913923", "Plaga","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-19.jpg"));
-        collection.add(new Contacto("981914213", "Libelula","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-22.jpg"));
-        collection.add(new Contacto("981914213", "Libelula","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-3.jpg\n"));
+        collection.add(new Contacto("981999923", "Dia","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-4.jpeg"));
+        collection.add(new Contacto("9859913923", "Noche","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-19.jpg"));
+        collection.add(new Contacto("981914213", "Aurora","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-22.jpg"));
+        collection.add(new Contacto("981914213", "paisaje","https://mymodernmet.com/wp/wp-content/uploads/2019/05/even-tryggstrand-norway-photos-3.jpg\n"));
         return collection;
     }
 }
