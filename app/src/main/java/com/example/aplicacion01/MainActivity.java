@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         contactoAdaptador = new ContactoAdaptador(this, items, queue.getImageLoader());
         contactosList.setAdapter(contactoAdaptador);
 
+        Contacto.sendRequestPOST(queue,this);
+
     }
     public void refreshList(){
         if ( contactoAdaptador!= null ) {
