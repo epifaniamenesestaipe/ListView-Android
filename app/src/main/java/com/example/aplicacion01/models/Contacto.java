@@ -44,7 +44,7 @@ public class Contacto {
     public static void sendRequestPOST(QueueUtils.QueueObject o, final MainActivity _interface) {
         String url = "http://rrojasen.alwaysdata.net/purchaseorders.json";
         url = "http://fipo.equisd.com/api/users/new.json";
-        //url = "http://192.168.58.3:8056/api/users/new.json";
+        url = "https://early-magpie.glitch.me/products/new.json";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -96,8 +96,10 @@ public class Contacto {
 
     public static void injectContactsFromCloud(final QueueUtils.QueueObject o,
                                                final ArrayList<Contacto> contactos,
-                                               final MainActivity _interface) {
+                                               final MainActivity _interface,
+                                               final String tipo) {
         String url = "http://fipo.equisd.com/api/users.json";
+        url = "https://early-magpie.glitch.me/products.json?tipo=" + tipo;
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
@@ -109,8 +111,8 @@ public class Contacto {
                                 JSONArray list = response.getJSONArray("objects");
                                 for (int i=0; i < list.length(); i++) {
                                     JSONObject o = list.getJSONObject(i);
-                                    contactos.add(new Contacto(o.getString("first_name"),
-                                            o.getString("last_name"), ""));
+                                    contactos.add(new Contacto(o.getString("name"),
+                                            o.getString("description"), ""));
                                 }
 
                             } catch (JSONException e) {
